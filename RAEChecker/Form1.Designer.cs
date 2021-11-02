@@ -33,11 +33,13 @@ namespace RAEChecker
             this.textBox_input = new System.Windows.Forms.TextBox();
             this.label_result = new System.Windows.Forms.Label();
             this.button_check = new System.Windows.Forms.Button();
+            this.label_info = new System.Windows.Forms.Label();
             this.panel_base.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_base
             // 
+            this.panel_base.Controls.Add(this.label_info);
             this.panel_base.Controls.Add(this.textBox_input);
             this.panel_base.Controls.Add(this.label_result);
             this.panel_base.Controls.Add(this.button_check);
@@ -75,6 +77,15 @@ namespace RAEChecker
             this.button_check.UseVisualStyleBackColor = true;
             this.button_check.Click += new System.EventHandler(this.button_check_Click);
             // 
+            // label_info
+            // 
+            this.label_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_info.Location = new System.Drawing.Point(213, 345);
+            this.label_info.Name = "label_info";
+            this.label_info.Size = new System.Drawing.Size(380, 39);
+            this.label_info.TabIndex = 3;
+            this.label_info.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormRAE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -95,6 +106,7 @@ namespace RAEChecker
         private System.Windows.Forms.TextBox textBox_input;
         private System.Windows.Forms.Label label_result;
         private System.Windows.Forms.Button button_check;
+        private System.Windows.Forms.Label label_info;
     }
 }
 
