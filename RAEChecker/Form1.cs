@@ -25,13 +25,17 @@ namespace RAEChecker
                 Stopwatch stopwatch = new Stopwatch();
                 stopwatch.Start();
 
-                label_result.Text = existeEnLaRAE(word) ? "EXISTE" : "NO EXISTE";
+                this.label_result.Text = existeEnLaRAE(word) ? "EXISTE" : "NO EXISTE";
 
                 stopwatch.Stop();
                 this.label_info.Text = "Consulta realizada en: " + stopwatch.ElapsedMilliseconds + " ms.";
             }
         }
 
+        /* Si una palabra no existe en la RAE, existe un div en el documento html devuelto por la consulta que tiene por id "resultados"
+        * En caso de no existir la palabra consultada este div tiene como innerText un string que comienza con "Aviso:"
+        * Si existe la palabra, el div mencionado antes comienza con la palabra que viene en el diccionario.
+        */
         public bool existeEnLaRAE(string word)
         {
             string url = "https://dle.rae.es/" + word;
